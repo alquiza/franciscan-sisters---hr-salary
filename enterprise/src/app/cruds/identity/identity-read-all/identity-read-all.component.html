@@ -1,0 +1,30 @@
+<section class="all-identities">
+  <div class="row">
+    <div class="col-lg-12" class="jumbotron-fluid">
+      <mat-card class="mat-elevation-z20">
+        <mat-card-header></mat-card-header>
+        <mat-card-content>
+          <table class="table table-striped jumbotron-fluid mat-elevation-z10">
+            <thead>
+              <td *ngFor="let identity of identityHeads">{{ identity.name }}</td>
+            </thead>
+            <tbody>
+              <tr *ngFor="let identity of identities ; let employee of employees">
+                <td>{{ identity.employee_id }}</td>
+                <td>{{ identity.tax_id }}</td>
+                <td>{{ employee.last_name }}</td>
+                <td>{{ employee.first_name }}</td>
+                <td>
+                  <button mat-stroked-button type="submit" class="btn btn-block mat-elevation-z14">{{ actionButton00 }}</button>
+                  <button mat-stroked-button type="submit" class="btn btn-block mat-elevation-z14">{{ actionButton01 }}</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

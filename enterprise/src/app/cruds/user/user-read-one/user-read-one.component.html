@@ -1,0 +1,67 @@
+<section class="user-admin-profile">
+  <div class="row">
+    <div class="col-lg-12">
+      <mat-card class="jumbotron-fluid mat-elevation-z20">
+        <mat-card-header>
+          <mat-card-title>
+            {{ user.username }}
+          </mat-card-title>
+          <mat-card-subtitle>
+            {{ user.email }}
+          </mat-card-subtitle>
+        </mat-card-header><hr>
+        <mat-card-content>
+          <div class="row">
+            <div class="col-lg-6">
+              <mat-form-field class="container">
+                <mat-label for="username">Username:</mat-label>
+                <input matInput type="text" name="username" id="username" [(ngModel)]="user.username"disable class="form-control">
+              </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+              <mat-form-field class="container">
+                <mat-label for="email">Email:</mat-label>
+                <input matInput type="email" name="email" id="email" [(ngModel)]="user.email" class="form-control">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <mat-form-field class="container">
+              <mat-label for="password">Password:</mat-label>
+              <input matInput type="email" name="password" id="password" [(ngModel)]="user.password" disabled class="form-control">
+            </mat-form-field>
+          </div>
+
+  <div class="row">
+            <div class="col-lg-6">
+              <mat-form-field class="container">
+                <mat-label for="last_name">Surname:</mat-label>
+                <input matInput type="text" name="last_name" id="last_name" [(ngModel)]="user.last_name" class="form-control">
+              </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+              <mat-form-field class="container">
+                <mat-label for="first_name">First Name:</mat-label>
+                <input matInput type="first_name" name="first_name" id="first_name" [(ngModel)]="user.first_name" class="form-control">
+              </mat-form-field>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <div class="row">
+            <div class="col-lg-4" style="margin: 2.00em auto;">
+              <button mat-stroked-button type="submit" (click)="editAuthUser()" class="btn btn-block mat-elevation-z14">{{ authActionButton00 }}</button>
+            </div>
+            <div class="col-lg-4" style="margin: 2.00em auto;">
+              <button mat-stroked-button type="submit" (click)="deleteAuthUser()" class="btn btn-block mat-elevation-z14">{{ authActionButton01 }}</button>
+            </div>
+            <div class="col-lg-4" style="margin: 2.00em auto;">
+              <button mat-stroked-button type="submit" (click)="returnAuthUsers()" class="btn btn-block mat-elevation-z14">{{ authActionButton02 }}</button>
+            </div>
+          </div>
+        </mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,9 @@
+<mat-toolbar class="mat-elevation-z24 navbar-expand-xl fixed-top" color="primary">
+  <span><a [routerLink]="['/']" [routerLinkActive]=""><h2>{{ appPageTitle }}</h2></a></span>
+  <div class="officialHeadButtons">
+    <span><a mat-stroked-button (click)="main()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial00 }}</a></span>
+    <span><a mat-stroked-button (click)="login()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial01 }}</a></span>
+    <span><a mat-stroked-button (click)="logout()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial02 }}</a></span>
+    <span><a mat-stroked-button (click)="bundy()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial03 }}</a></span>
+  </div>
+</mat-toolbar>

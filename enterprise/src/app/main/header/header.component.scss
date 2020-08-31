@@ -1,0 +1,29 @@
+.sidenav-container {
+  height: 100%;
+  z-index: -1;
+}
+
+.sidenav {
+  margin-top: 4.5em;
+  z-index: -1;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+span {
+  flex: 1 1 auto;
+}
+
+.mat-stroked-button {
+  width: 10em;
+  margin-right: 1.25em;
+  border-radius: 2.0em;
+}

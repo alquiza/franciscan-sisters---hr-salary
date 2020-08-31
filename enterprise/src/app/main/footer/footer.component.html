@@ -1,0 +1,15 @@
+<section class="footer">
+  <footer style="position: relative; bottom: 0; margin-top: 5.0em;">
+    <div class="col-lg-7"><hr></div>
+    <div class="col-lg-5">
+      <ul *ngFor="let footNote of footNotes">
+        <li>{{ footNote.tag }}</li>
+      </ul>
+      <ul>
+        <li>{{ footTag00 }}&copy;&nbsp;{{ footTag01 }}.</li>
+        <li>{{ footTag02 }}</li>
+        <li>{{ footLine00 }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ footLine01 }}</li>
+      </ul>
+    </div>
+  </footer>
+</section>

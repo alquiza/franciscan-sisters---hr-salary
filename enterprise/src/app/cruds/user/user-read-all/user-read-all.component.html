@@ -1,0 +1,31 @@
+<section class="jumbotron-fluid">
+  <div class="row">
+    <div class="col-lg-12 jumbotron-fluid">
+      <mat-card class="mat-elevation-z16">
+        <mat-card-header>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <table class="table table-striped jumbotron-fluid mat-elevation-z10">
+            <thead>
+              <td *ngFor="let userHeader of userHeaders ">{{ userHeader.name }}</td>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users">
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>
+                  <button mat-stroked-button type="submit" (click)="deleteAuthUser(user.id)" class="btn btn-block mat-elevation-z14">{{ actionButton00 }}</button>
+                  <button mat-stroked-button type="submit" (click)="authUserDetails(user.id)" class="btn btn-block mat-elevation-z14">{{ actionButton01 }}</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </mat-card-content>
+        <mat-card-actions></mat-card-actions>
+        <mat-card-footer></mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</section>

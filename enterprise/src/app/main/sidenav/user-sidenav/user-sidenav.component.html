@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'push' + 'over' : 'side' + 'side'"
+      [opened]="false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <mat-accordion>
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>Identities</mat-expansion-panel-header>
+          <div class="container jumbotron-fluid">
+            <a [routerLink]="['identities']" routerLinkActive="router-link-active">ALL</a>
+          </div>
+          <div class="container jumbotron-fluid">
+            <a [routerLink]="['identities/add']" routerLinkActive="router-link-active">ADD</a>
+          </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel hideToggle>
+          <mat-expansion-panel-header>Employees</mat-expansion-panel-header>
+          <div class="container jumbotron-fluid">
+            <a [routerLink]="['employees']" routerLinkActive="router-link-active">ALL</a>
+          </div>
+          <div class="container jumbotron-fluid">
+            <a [routerLink]="['employee/add']" routerLinkActive="router-link-active">ADD</a>
+          </div>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>enterprise</span>
+      <div class="officialHeadButtons">
+        <span><a mat-stroked-button (click)="main()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial00 }}</a></span>
+        <span><a mat-stroked-button (click)="login()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial01 }}</a></span>
+        <span><a mat-stroked-button (click)="logout()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial02 }}</a></span>
+        <span><a mat-stroked-button (click)="bundy()" class="mat-elevation-z20 btn btn-block btn-home">{{ buttonOfficial03 }}</a></span>
+      </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
